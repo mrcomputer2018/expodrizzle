@@ -4,6 +4,7 @@ import { useSQLiteContext } from "expo-sqlite"
 import { drizzle } from "drizzle-orm/expo-sqlite";
 import * as productSchema from "../database/schemas/productSchema"
 import { like, asc, eq } from "drizzle-orm";
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 type Data = {
     id: number;
@@ -105,7 +106,7 @@ const Home = () => {
 
             <View style={ styles.searchButton }>
                 <TextInput 
-                style={ styles.input }
+                style={ styles.inputSearch }
                 placeholder="Pesquisar"
                 value={search}
                 onChangeText={setSearch}
@@ -114,7 +115,9 @@ const Home = () => {
                 <TouchableOpacity 
                 style={ styles.button }
                 onPress={handleSearch}>
-                    <Text style= { styles.textButton }></Text>
+                    <Text style= { styles.textButton }>
+                        <Ionicons name="search" size={16} color="white" />
+                    </Text>
                 </TouchableOpacity>
             </View>
 
@@ -165,6 +168,16 @@ const styles = StyleSheet.create({
     searchButton: {
         flexDirection: 'row',
         width: '100%',
+    },
+    inputSearch: {
+        height: 50,
+        marginTop: 12,
+        marginLeft: 12,
+        borderWidth: 1,
+        borderRadius: 7,
+        borderColor: '#999',
+        paddingHorizontal: 16,
+        flex: 1,
     },
     pressable: {
         marginTop: 26,
