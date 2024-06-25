@@ -44,7 +44,7 @@ const Home = () => {
                     <Text>{item.name}</Text>
                 </Pressable>
             }
-            ListEmptyComponent={() => <Text style={ styles.textEmpty }>Nenhum item encontrado</Text>}
+            ListEmptyComponent={() => <Text style={ styles.textEmpty }>Lista vazia.</Text>}
             />
         </View>
     );
