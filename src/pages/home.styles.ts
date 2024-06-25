@@ -1,8 +1,8 @@
-import { Button } from "react-native";
+import { Button, ImageBackground } from "react-native";
 
 export const styles = {
     container : {
-        flex: 1,
+        width: '100%',
     },
     input: {
         height: 50,
@@ -13,6 +13,26 @@ export const styles = {
         paddingHorizontal: 16,
     },
     button: {
+        height: 50,
         margin: 12,
-    }
+        backgroundColor: 'blue',
+        padding: 16,
+        alignItems: 'center',
+        borderRadius: 7,
+    },
+    textButton : {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 16,
+    },
+    pressable: {
+        marginTop: 26,
+        padding: 16,
+        borderWidth: 1,
+        borderRadius: 7,
+    },
+    textEmpty: {
+        textAlign: 'center',
+        marginTop: 26,
+    },
 }
