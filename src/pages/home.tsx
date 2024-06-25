@@ -107,7 +107,7 @@ const Home = () => {
             <View style={ styles.searchButton }>
                 <TextInput 
                 style={ styles.inputSearch }
-                placeholder="Pesquisar"
+                placeholder="Pesquisar..."
                 value={search}
                 onChangeText={setSearch}
                 />
@@ -116,7 +116,7 @@ const Home = () => {
                 style={ styles.button }
                 onPress={handleSearch}>
                     <Text style= { styles.textButton }>
-                        <Ionicons name="search" size={16} color="white" />
+                        <Ionicons name="search" size={18} color="white" />
                     </Text>
                 </TouchableOpacity>
             </View>
